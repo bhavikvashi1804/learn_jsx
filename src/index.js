@@ -2,20 +2,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function getButtonText(){
-  return ("Click Me");
-}
+
 
 //create react component
 const App = () => {
+  const buttonText="Click Me";
+  const buttonText1=1234;
+  const buttonText2=["Hii","Hello"];
+  const buttonText3=[20,15];
+  const buttonText4={
+    text:'Click on me'
+  };
+
   return (
     <div>
-      <label className="label" for="name">
-        Enter your name:
-      </label>
-      <input type="text" id="name" />
-      <button type="submit" style={{backgroundColor:'red', color:'white'}}>{getButtonText()}</button>
-      
+      <p>{buttonText}</p>
+      <p>{buttonText1}</p>
+      <p>{buttonText2}</p>
+      <p>{buttonText2[0]}</p>
+      <p>{buttonText3}</p> 
+      {/* <p>{buttonText4}</p>  */}
+      {/* gives error that you can not refer to JS object */}
+      <p>{buttonText4.text}</p>     
     </div>
   );
 };
