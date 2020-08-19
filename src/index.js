@@ -4,13 +4,15 @@ import ReactDOM from "react-dom";
 
 //create react component
 const App = () => {
-  const buttonStyle = {
-    backgroundColor: "cyan",
-    color: "white",
-  };
+
+  function getTime(){
+    const cTime=new Date().toLocaleTimeString();
+    return cTime;
+  }
   return (
     <div>
-      <button style={buttonStyle}>Click Me</button>
+      <h3>Current Time:</h3>
+      {getTime()}
     </div>
   );
 };
